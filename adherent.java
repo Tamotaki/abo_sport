@@ -9,18 +9,19 @@ public class Adherent {
     private Abonnement abonnement;
     private List<Reservation> reservations;
 
+//Constructeur adhérent
     public Adherent(int id, String nom, Abonnement abonnement) {
         this.id = id;
         this.nom = nom;
         this.abonnement = abonnement;
         this.reservations = new ArrayList<>();
     }
-
+//Faire une réservation
     public void reserver(Seance s) {
         Reservation r = new Reservation(s);
         reservations.add(r);
     }
-
+//Somme dépenses confirmées
     public double depensesTotales() {
         double total = 0;
         for (Reservation r : reservations) {
@@ -30,7 +31,7 @@ public class Adherent {
         }
         return total;
     }
-
+//Réservations futures
     public List<Reservation> reservationsFutures() {
         LocalDateTime maintenant = LocalDateTime.now();
         List<Reservation> futures = new ArrayList<>();
@@ -42,11 +43,13 @@ public class Adherent {
         return futures;
     }
 
+//Getters
     public int getId() { return id; }
     public String getNom() { return nom; }
     public Abonnement getAbonnement() { return abonnement; }
     public List<Reservation> getReservations() { return reservations; }
-
+    
+//Affichage simple
     @Override
     public String toString() {
         return id + "-" + nom + abonnement;
