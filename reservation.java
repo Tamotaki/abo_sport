@@ -1,3 +1,8 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Reservation {
     private Seance seance;
     private List<Prestation> prestation;
@@ -29,5 +34,10 @@ public void annuler() {
     this.statut = StatutReservation.Annulée;
 }
 
+//Méthode toString
+@Override
+public String toString(){
+    return seance + prestations.size() + coutPrestations + "€, " + statut;
+}
 
 }
