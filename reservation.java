@@ -37,7 +37,7 @@ public void annuler() {
 //Méthode toString
 @Override
 public String toString(){
-    return seance + prestations.size() + coutPrestations + "€, " + statut;
+    return seance + prestations.size() + coutPrestations + "€ " + statut;
 }
 
 }
