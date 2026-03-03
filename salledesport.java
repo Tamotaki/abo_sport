@@ -5,21 +5,24 @@ public class SalleDeSport {
     private List<Adherent> adherents;
     private List<Seance> seances;
 
-//Constructeur classe salle de sport
+//Constructeur salle de sport vide
     public SalleDeSport() {
         adherents = new ArrayList<>();
         seances = new ArrayList<>();
     }
-
+//Ajouter adhérent
     public void ajouterAdherent(Adherent a) {
         adherents.add(a);
     }
+//Ajouter séance
     public void ajouterSeance(Seance s) {
         seances.add(s);
     }
+//Toutes les séances disponibles
     public List<Seance> seancesDisponibles() {
         return new ArrayList<>(seances);  // Simple : toutes dispo
     }
+//Adhérents avec accès sauna
     public List<Adherent> adherentsAvecSauna() {
         List<Adherent> avecSauna = new ArrayList<>();
         for (Adherent a : adherents) {
@@ -29,6 +32,7 @@ public class SalleDeSport {
         }
         return avecSauna;
     }
+//Chiffre d'affaires prestations
     public double chiffreAffairesPrestations() {
         double total = 0;
         for (Adherent a : adherents) {
@@ -36,6 +40,7 @@ public class SalleDeSport {
         }
         return total;
     }
+//Trouver adhérent ou exception
     public Adherent trouverAdherent(int id) {
         for (Adherent a : adherents) {
             if (a.getId() == id) {
@@ -44,6 +49,6 @@ public class SalleDeSport {
         }
         throw new RuntimeException("Adherent " + id + " non trouvé");
     }
-
+//Getter
     public List<Adherent> getAdherents() { return adherents; }
 }
