@@ -1,8 +1,16 @@
-class Seance {
+public class Seance {
     private int id;
     private String nom;
     private LocalDateTime dateHeure;
     private int capaciteMax;
+
+//Constructeur classe séance
+public Seance (int id, String nom, LocalDateTime dateHeure, int capaciteMax){
+    this.id = id;
+    this.nom = nom;
+    this.dateHeure = dateHeure;
+    this.capaciteMax = capaciteMax;
+}
 
 //Getters
 public int getID(){

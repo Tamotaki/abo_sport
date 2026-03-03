@@ -1,4 +1,4 @@
-class Prestation {
+public class Prestation {
 
 private String code;
 private String libelle;
