@@ -13,14 +13,14 @@ private double prix;
 public Prestation (String code, String libelle, double prix) {
     this.code = code;
     this.libelle = libelle;
-    this.pri = prix;
+    this.prix = prix;
 }
 
 //Getters
 public String getCode(){
     return code;
 }
-publlic String getLibelle(){
+public String getLibelle(){
     return libelle;
 }
 public double getPrix(){

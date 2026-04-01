@@ -10,13 +10,13 @@ public class Reservation {
      
 public Reservation (Seance seance) {
     this.seance = seance;
-    this.prestations = new ArrayList<>();
-    this.status = StatutReservation.Confirmée; //Confirme par défaut
+    this.prestation = new ArrayList<>();
+    this.statut = StatutReservation.Confirmée; //Confirme par défaut
 }
 //Ajout d'une prestation à la liste
 public void ajouterPrestation (Prestation p){
     if (p != null) {
-        prestations.add(p);
+        prestation.add(p);
     }
 }
 
@@ -24,7 +24,7 @@ public void ajouterPrestation (Prestation p){
 public double coutPrestations(){
     double total = 0.0;
     for (Prestation p : prestation) {
-        total += p.getPrix;
+        total += p.getPrix();
     }
     return total;
 }
@@ -37,7 +37,6 @@ public void annuler() {
 //Méthode toString
 @Override
 public String toString(){
-    return seance + prestations.size() + coutPrestations + "€ " + statut;
+    return seance + prestation.size() + coutPrestation + "€ " + statut;
 }
-
 }
