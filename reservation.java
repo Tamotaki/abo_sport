@@ -39,4 +39,24 @@ public void annuler() {
 public String toString(){
     return seance + prestation.size() + coutPrestation + "€ " + statut;
 }
+public Object getStatut() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getStatut'");
+}
+public Object getStatut() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getStatut'");
+}
+public Seance getSeance() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getSeance'");
+}
+public Object getStatutReservation() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getStatutReservation'");
+}
+public Object getStatut() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getStatut'");
+}
 }

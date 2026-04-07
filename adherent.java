@@ -27,7 +27,7 @@ public class Adherent {
     public double depensesTotales() {
         double total = 0;
         for (Reservation r : reservations) {
-            if (r.getStatut() == StatutReservation.CONFIRMEE) {
+            if (r.getStatutReservation() == StatutReservation.CONFIRMEE) {
                 total += r.coutPrestations();
             }
         }

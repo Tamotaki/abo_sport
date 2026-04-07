@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class SalleDeSport {
+public class Salledesport {
     private List<Adherent> adherents;
     private List<Seance> seances;
 
 //Constructeur salle de sport vide
-    public SalleDeSport() {
+    public Salledesport() {
         adherents = new ArrayList<>();
         seances = new ArrayList<>();
     }
